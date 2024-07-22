@@ -1,0 +1,234 @@
+#include<LPC214X.h>
+int main()
+{
+while(1)
+{
+	IODIR0|=(0x01<<1);
+	IODIR0|=(0x01<<2);
+	IODIR0|=(0x01<<3);
+	IODIR0|=(0x01<<4);
+	IODIR0|=(0x01<<5);
+	IODIR0|=(0x01<<6);
+	IODIR0|=(0x01<<7);
+	IODIR1&=(~(0x01<<16));
+	IODIR1&=(~(0x01<<17));
+	IODIR1&=(~(0x01<<18));
+	IODIR1&=(~(0x01<<19));
+	IODIR1&=(~(0x01<<20));
+	IODIR1&=(~(0x01<<21));
+	IODIR1&=(~(0x01<<22));
+	IODIR1&=(~(0x01<<23));
+	IODIR1&=(~(0x01<<24));
+	IODIR1&=(~(0x01<<25));
+	
+	//0
+	if((0x01<<16)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<5);
+		IOSET0|=(0x01<<6);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//1
+	if((0x01<<17)&IOPIN1)
+	{
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//2
+	if((0x01<<18)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<5);
+		IOSET0|=(0x01<<7);
+		
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//3
+	if((0x01<<19)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//4
+	if((0x01<<20)&IOPIN1)
+	{
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<6);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//5
+	if((0x01<<21)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<6);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+
+	//6
+	if((0x01<<22)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<5);
+		IOSET0|=(0x01<<6);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//7
+	if((0x01<<23)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	
+	//8
+	if((0x01<<24)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<5);
+		IOSET0|=(0x01<<6);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+	//9
+	if((0x01<<25)&IOPIN1)
+	{
+		IOSET0|=(0x01<<1);
+		IOSET0|=(0x01<<2);
+		IOSET0|=(0x01<<3);
+		IOSET0|=(0x01<<4);
+		IOSET0|=(0x01<<6);
+		IOSET0|=(0x01<<7);
+	}
+	else
+	{
+		IOCLR0|=(0x01<<1);
+		IOCLR0|=(0x01<<2);
+		IOCLR0|=(0x01<<3);
+		IOCLR0|=(0x01<<4);
+		IOCLR0|=(0x01<<5);
+		IOCLR0|=(0x01<<6);
+		IOCLR0|=(0x01<<7);
+
+	}
+}
+}
+	
